@@ -1,0 +1,26 @@
+{
+  "name": "tole2",
+  "version": "2.5.0",
+  "description": "Tole Bot Discord",
+  "main": "tole.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suryadihrn08/tole2.git"
+  },
+  "author": "Norach",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suryadihrn08/tole2/issues"
+  },
+  "homepage": "https://github.com/suryadihrn08/tole2#readme",
+  "dependencies": {
+    "@discordjs/opus": "^0.3.3",
+    "discord-player": "^3.2.1",
+    "discord.js": "^12.5.1",
+    "ffmpeg-static": "^4.2.7",
+    "ytdl-core": "^4.4.5"
+  }
+}

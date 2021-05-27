@@ -1,0 +1,30 @@
+const { MessageEmbed } = require("discord.js");
+
+module.exports = {
+    name: 'suggest',
+    aliases: [],
+    category: 'Other',
+    utilisation: '',
+
+async execute(client, msg, args) {
+    const e1 = new MessageEmbed()
+    .setDescription(`${msg.author} ❔ What is your suggestion?`);
+    if(!args.length) return msg.channel.send(e1);
+    
+    const channel = client.channels.cache.get("805139645884792852");
+    
+    const e2 = new MessageEmbed()
+    .setTitle("New Suggestion")
+    .setDescription(args.join(" "))
+    .setThumbnail(msg.author.displayAvatarURL({dynamic: true, size: 2048 }))
+    .setAuthor(msg.author.tag, msg.author.displayAvatarURL({ size: 512 }))
+    .setFooter(`User ID: ${msg.author.id}`);
+
+    const message = await channel.send({ e2 });
+    await message.react("✅");
+    await message.react("❌");
+    return message.send(`${msg.author} ✉ Your suggestion has been successfully sent`)
+
+
+}
+}
